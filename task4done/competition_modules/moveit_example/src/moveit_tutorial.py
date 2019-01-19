@@ -57,7 +57,14 @@ class moveit_tutorial(object):
 		 
 
 		############################ Method : Using IK to calculate joint value ############################
-                ### close gripper
+                 ### open gripper
+                grip_data = Float64()
+                grip_data.data = 0.5
+                self.pub_gripper.publish(grip_data)
+                rospy.sleep(2)
+		
+		### close gripper
+		rospy.sleep(2)
                 grip_data = Float64()
                 grip_data.data = 1.7
                 self.pub_gripper.publish(grip_data)
