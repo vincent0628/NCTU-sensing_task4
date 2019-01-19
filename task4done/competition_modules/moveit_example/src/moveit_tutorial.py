@@ -54,8 +54,7 @@ class moveit_tutorial(object):
 		print "============ Printing robot state", self.robot.get_current_state()
 		print ""
 		
-		### Go strange
-		self.strange() 
+		 
 
 		############################ Method : Using IK to calculate joint value ############################
                 ### close gripper
@@ -64,6 +63,8 @@ class moveit_tutorial(object):
                 self.pub_gripper.publish(grip_data)
                 rospy.sleep(2)
 		
+		### Go strange
+		self.strange()
 		
 		# After determining a specific point where arm should move, we input x,y,z,degree to calculate joint value for each wrist. 
 
